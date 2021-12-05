@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     func myAlert(title:String,massege:String,color:UIColor){
         let alert = UIAlertController(title: title, message: massege, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = color
+        alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = color.withAlphaComponent(0.4)
         self.present(alert, animated: true, completion: nil)
     }
     
