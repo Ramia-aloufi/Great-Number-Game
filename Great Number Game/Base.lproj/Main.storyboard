@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,79 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Great_Number_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome to a greatenumber game  " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae0-Qo-tf7">
+                                <rect key="frame" x="16" y="76" width="382" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Iea-5T-HuW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfw-K8-8Hu">
+                                <rect key="frame" x="132" y="423" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JHc-NU-6q7"/>
+                                    <constraint firstAttribute="width" constant="150" id="Rbm-lj-iBF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptg-55-FH7">
+                                <rect key="frame" x="165.5" y="505" width="83" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="checkuserguessbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ErI-Vb-VV4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am Thinking of a number between 1 - 100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8A1-EO-Udu">
+                                <rect key="frame" x="16" y="121" width="382" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="AQB-YH-UfJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a guess!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZU-fq-UsY">
+                                <rect key="frame" x="16" y="166" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ptg-55-FH7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Hb-qR-dn0"/>
+                            <constraint firstItem="8A1-EO-Udu" firstAttribute="top" secondItem="Ae0-Qo-tf7" secondAttribute="bottom" id="2If-gS-Ral"/>
+                            <constraint firstItem="ptg-55-FH7" firstAttribute="top" secondItem="Hfw-K8-8Hu" secondAttribute="bottom" constant="32" id="Cqw-LL-RPq"/>
+                            <constraint firstItem="Hfw-K8-8Hu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HkS-Mm-o1K"/>
+                            <constraint firstItem="8A1-EO-Udu" firstAttribute="leading" secondItem="Ae0-Qo-tf7" secondAttribute="leading" id="NJI-lm-HQb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ae0-Qo-tf7" secondAttribute="trailing" constant="16" id="R2H-n3-yg0"/>
+                            <constraint firstItem="dZU-fq-UsY" firstAttribute="trailing" secondItem="8A1-EO-Udu" secondAttribute="trailing" id="TGP-VE-O6c"/>
+                            <constraint firstItem="Ae0-Qo-tf7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="W56-sX-zGo"/>
+                            <constraint firstItem="dZU-fq-UsY" firstAttribute="top" secondItem="8A1-EO-Udu" secondAttribute="bottom" id="XfX-Ux-1Lo"/>
+                            <constraint firstItem="ptg-55-FH7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0334821" id="jvV-l0-nwe"/>
+                            <constraint firstItem="dZU-fq-UsY" firstAttribute="leading" secondItem="8A1-EO-Udu" secondAttribute="leading" id="l0c-6b-eVs"/>
+                            <constraint firstItem="8A1-EO-Udu" firstAttribute="trailing" secondItem="Ae0-Qo-tf7" secondAttribute="trailing" id="pj8-hr-Put"/>
+                            <constraint firstItem="ptg-55-FH7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="tKI-9l-Rep"/>
+                            <constraint firstItem="Hfw-K8-8Hu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vLz-8C-7dp"/>
+                            <constraint firstItem="Ae0-Qo-tf7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yZ5-Xn-KGr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="userguesslabl" destination="Hfw-K8-8Hu" id="3uw-8A-DyL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </scene>
     </scenes>
 </document>
